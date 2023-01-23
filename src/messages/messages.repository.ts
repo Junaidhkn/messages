@@ -1,5 +1,4 @@
 import { readFile, writeFile } from 'fs/promises';
-import { measureMemory } from 'vm';
 
 export class MessagesRepository {
   async findOne(id: string) {
