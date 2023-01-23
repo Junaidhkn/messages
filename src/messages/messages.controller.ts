@@ -1,13 +1,13 @@
 import { Controller } from '@nestjs/common';
 import { Body, Get, Param, Post } from '@nestjs/common/decorators';
-import { CreateMessegeDto } from './data_transfer_objects/create-message.dto';
+import { CreateMessageDto } from './data_transfer_objects/create-message.dto';
 
 @Controller('messages')
 export class MessagesController {
   @Get()
   listMessages() {}
   @Post()
-  createMessage(@Body() body: CreateMessegeDto) {
+  createMessage(@Body() body: CreateMessageDto) {
     console.log(body);
   }
   @Get('/:id')
